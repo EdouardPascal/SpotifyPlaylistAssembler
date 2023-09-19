@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetched Playlist</title>
+    <link rel="stylesheet" th:href="@{/css/playlist.css?version=51}">
+</head>
+<body>
+    <h1>Merge playlists</h1>
+    <p>Please select the playlist you want to be merge and give a name to the resulting playlist</p>
+<form method="post" action="/playlist">
+    <div id="list_playlists">
+        <div class="individual_playlist" th:each="p: ${playlists}">
+            <input type="checkbox" name="playlist" th:value="${p.id} ?: 'no ID'">
+            <label th:for="${p.id} ?: 'no ID' ">
+                <div ><img class="image_wrapper" th:src="${p.images[0].url} ?: 'nocover.png'"></div>
+                <div class="playlist_info">
+                    <div class="playlist_name" th:text="${p.name} ?: 'No name'" style="font-weight: bold;"></div>
+                    <div class="playlist_track"><span th:text="${p.tracks.total} ?: '0'"></span>:Tracks</div>
+                </div>
+
+            </label>
+
+            
+        </div>
+       
+       
+     </div>  
+
+     <label for="name">Name of your new Playlist</label>
+     <input type="text" name="name">
+       
+     <input type="submit" value="Submit">
+
+</form>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css?version=51}">
+    <title>MusicTransporter</title>
+
+</head>
+<body>
+
+<div class="landing_main">
+    <div style="text-align: center;"><h1>
+        Welcome to MusicTransporter!
+    </h1>
+        <h2>
+            A WebApp that allows you to Select your Spotify playlists and merge them to create a new playlist.
+        </h2>
+        <p><strong>You should have both a Spotify account before proceeding!</strong></p>
+        <form method="GET" action="/login">
+            <button id="home_button" type="submit">
+                Start merging playlists from Spotify
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+
+<img class="landing_image" th:src="@{spotify_apple_transfer.jpg}">
+
+
+</body>
+</html>

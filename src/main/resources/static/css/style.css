@@ -1,0 +1,31 @@
+
+
+.landing_image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+
+}
+
+h1{
+    color: blue;
+
+}
+
+#home_button
+{
+ display: block;
+        margin: auto;
+        margin-bottom: 40px;
+        background-color: #FB3333;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        &:focus{
+          outline: none;}
+          }
